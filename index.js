@@ -24,6 +24,6 @@ async function getS3Data() {
     })
     .promise();
 
-  console.log(s3response);
+  console.log(s3response.Contents);
 }
 getS3Data();
