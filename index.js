@@ -57,8 +57,8 @@ app.get("/photos", (request, response) => {
   getS3Data();
 });
 
-function authorizeUser() {
-  console.log("Authorized");
-}
+// function authorizeUser() {
+//   console.log("Authorized");
+// }
 
 app.listen(PORT, () => console.log(`App is running on ${PORT}`));
