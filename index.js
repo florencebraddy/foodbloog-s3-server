@@ -20,7 +20,7 @@ async function getS3Data() {
   const s3response = await s3
     .listObjectsV2({
       Bucket: "recipestorage83411-dev",
-      Prefix: ""
+      Prefix: "public/florenceamess@hotmail.co.uk"
     })
     .promise();
 
