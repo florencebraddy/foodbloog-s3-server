@@ -9,9 +9,6 @@ const app = express(PORT);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-console.log(process.env.AWS_ACCESS_KEY);
-console.log(process.env.AWS_SECRET_ACCESS_KEY);
-
 function setCredentials() {
   aws.config.setPromisesDependency();
   aws.config.update({
