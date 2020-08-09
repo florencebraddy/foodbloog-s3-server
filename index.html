@@ -12,6 +12,11 @@
       (async function() {
         const res = await fetch("http://localhost:3000/photos");
         console.log(res);
+        const json = await res.json();
+        console.log(json);
+        console.log(json[0].Body.data);
+        let arrayBufferView = new Uint8Array(json);
+        document.getElememtById("profilepic").innerHTML = json[0].Body.data;
       })();
     </script>
   </body>
