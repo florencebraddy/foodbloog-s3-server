@@ -24,11 +24,12 @@ const s3 = new aws.S3();
 const bucket = "recipestorage83411-dev";
 
 app.get("/photos", (request, response) => {
+  const username = request.query.username;
   async function getS3Data() {
     const s3response = await s3
       .listObjectsV2({
         Bucket: bucket,
-        Prefix: ""
+        Prefix: `public/${username}`
       })
       .promise();
 

@@ -7,7 +7,7 @@
     <title>Profile Pictures</title>
   </head>
   <body>
-    <img id="profilepic" alt="fail" width="400vw"/>
+    <img id="profilepic" alt="fail" width="400vw" />
     <script>
       (async function() {
         const res = await fetch("http://localhost:3000/photos");
@@ -18,8 +18,7 @@
         let blob = new Blob([arrayBufferView], { type: "image/jpeg" });
         let urlCreator = window.url || window.webkitURL;
         let imageUrl = urlCreator.createObjectURL(blob);
-        console.log("this is the image url", imageUrl);
-        document.getElementById("profilepic").src = imageUrl
+        document.getElementById("profilepic").src = imageUrl;
       })();
     </script>
   </body>
